@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://3db01hrjfner"
+path="res://.godot/imported/day1part1.glsl-8122b4348271706c11f11d4d070cb2b7.res"
+
+[deps]
+
+source_file="res://scripts/days/day1part1.glsl"
+dest_files=["res://.godot/imported/day1part1.glsl-8122b4348271706c11f11d4d070cb2b7.res"]
+
+[params]
+

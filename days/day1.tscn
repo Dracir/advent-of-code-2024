@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://cod5q8mq06lqw"]
+
+[ext_resource type="Script" path="res://scripts/days/Day1.cs" id="1_8iksf"]
+[ext_resource type="Script" path="res://scripts/utils/TextFileResource.cs" id="2_rt3oj"]
+
+[sub_resource type="Resource" id="Resource_jn3wq"]
+script = ExtResource("2_rt3oj")
+File = "res://inputs/d1.txt"
+
+[node name="Node" type="Node"]
+script = ExtResource("1_8iksf")
+Input = SubResource("Resource_jn3wq")

@@ -39,6 +39,14 @@ public static class StringExtentions
 	public static int[] ParseListOfInt(this string str, char separator = ' ')
 		=> str.Split(separator, StringSplitOptions.RemoveEmptyEntries)
 		.Select(int.Parse).ToArray();
+	public static int[] ParseListOfInt(this string str, string separator = " ")
+		=> str.Split(separator, StringSplitOptions.RemoveEmptyEntries)
+		.Select(int.Parse).ToArray();
+
+	public static (int, int)[] ParseListOfPairOfInt(this string str, string pairsSeparator = "\n", string intSeparator = " ")
+		=> str.Split(pairsSeparator, StringSplitOptions.RemoveEmptyEntries)
+		.Select(pair => pair.ParseListOfInt(intSeparator))
+		.Select(pair => (pair[0], pair[1])).ToArray();
 
 	public static string[] ParseListOfString(this string str, char separator = ' ')
 		=> str.Split(separator, StringSplitOptions.RemoveEmptyEntries);
