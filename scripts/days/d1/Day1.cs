@@ -46,7 +46,7 @@ public partial class Day1 : Node
 		var pairsCount = leftValues.Length;
 
 		var output = RunShaderGraphGOGO(
-			"res://scripts/days/day1part1.glsl",
+			"res://scripts/days/d1/day1part1.glsl",
 			shaderInput,
 			xGroups: (uint)pairsCount
 		);
@@ -110,7 +110,7 @@ public partial class Day1 : Node
 		var rd = RenderingServer.CreateLocalRenderingDevice();
 
 		// Load GLSL shader
-		var shaderFile = GD.Load<RDShaderFile>("res://scripts/days/day1part2.glsl");
+		var shaderFile = GD.Load<RDShaderFile>("res://scripts/days/d1/day1part2.glsl");
 		var shaderBytecode = shaderFile.GetSpirV();
 		var shader = rd.ShaderCreateFromSpirV(shaderBytecode);
 

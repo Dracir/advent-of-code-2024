@@ -1,6 +1,7 @@
 namespace AocUtils;
 
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 public static class StringExtentions
@@ -39,7 +40,8 @@ public static class StringExtentions
 	public static int[] ParseListOfInt(this string str, char separator = ' ')
 		=> str.Split(separator, StringSplitOptions.RemoveEmptyEntries)
 		.Select(int.Parse).ToArray();
-	public static int[] ParseListOfInt(this string str, string separator = " ")
+
+	public static int[] ParseListOfInt(this string str, string separator)
 		=> str.Split(separator, StringSplitOptions.RemoveEmptyEntries)
 		.Select(int.Parse).ToArray();
 
@@ -51,4 +53,8 @@ public static class StringExtentions
 	public static string[] ParseListOfString(this string str, char separator = ' ')
 		=> str.Split(separator, StringSplitOptions.RemoveEmptyEntries);
 
+	public static List<int[]> ParseListsOfListOfInt(this string str, string listsSeparator = "\n", char elementsSeparator = ' ')
+		=> str.Split(listsSeparator, StringSplitOptions.RemoveEmptyEntries)
+		.Select(list => list.ParseListOfInt())
+		.ToList();
 }

@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://dryriqy257ld2"]
+[gd_scene load_steps=4 format=3 uid="uid://dryriqy257ld2"]
 
 [ext_resource type="Script" path="res://scripts/days/Day2.cs" id="1_8wb20"]
+[ext_resource type="Script" path="res://scripts/utils/TextFileResource.cs" id="2_cyjob"]
+
+[sub_resource type="Resource" id="Resource_6uib3"]
+script = ExtResource("2_cyjob")
+File = "res://inputs/d2.txt"
 
 [node name="Node" type="Node"]
 script = ExtResource("1_8wb20")
+Input = SubResource("Resource_6uib3")
